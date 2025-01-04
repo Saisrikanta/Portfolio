@@ -50,14 +50,14 @@ function showContent(training) {
                 <li>Led practical sessions where students applied their learning to real-world datasets to build actionable insights.</li>
                 <li>Focused on business intelligence and data-driven decision-making, helping participants leverage Power BI for efficient data analysis and reporting.</li>
                 </ul>
-                <img src="../images/Training(BI).jpg" alt="Power BI and Flutter Workshop" class="training-image">
+                <img src="./images/Training(BI).jpg" alt="Power BI and Flutter Workshop" class="training-image">
             </div>
         `;
         relatedImages = `
             <div class="related-images">
-                <img src="../images/pb1.jpg" alt="Power BI" class="related-image">
-                <img src="../images/pb2.jpg" alt="Flutter" class="related-image">
-                <img src="../images/pb3.jpg" alt="Dashboard" class="related-image">
+                <img src="./images/pb1.jpg" alt="Power BI" class="related-image">
+                <img src="./images/pb2.jpg" alt="Flutter" class="related-image">
+                <img src="./images/pb3.jpg" alt="Dashboard" class="related-image">
             </div>
         `;
     } else if (training === 'python') {
@@ -71,14 +71,14 @@ function showContent(training) {
                 <li>Introduced students to functions and how to write reusable, efficient code.</li>
                 <li>Conducted practical sessions where students built small projects to solidify their understanding.</li>
                 <li>Provided guidance on problem-solving and best practices in Python programming.</li>
-                <img src="../images/python1.jpg" alt="python Training" class="training-image">
+                <img src="./images/python1.jpg" alt="python Training" class="training-image">
             </div>
         `;
         relatedImages = `
             <div class="related-images">
-                <img src="../images/python1.jpg" alt="python1" class="related-image">
-                <img src="../images/Training(python).jpg" alt="python2" class="related-image">
-                <img src="../images/python3.jpg" alt="python3" class="related-image">
+                <img src="./images/python1.jpg" alt="python1" class="related-image">
+                <img src="./images/Training(python).jpg" alt="python2" class="related-image">
+                <img src="./images/python3.jpg" alt="python3" class="related-image">
             </div>
         `;
     } else if (training === 'data-science') {
@@ -93,14 +93,14 @@ function showContent(training) {
                 <li>Introduced the concept of establishing connections between multiple datasets to derive insights and build a cohesive data model.</li>
                 <li>Conducted hands-on exercises where students worked with real-world data, applying techniques to clean and connect datasets.</li>
                 </ul>
-                <img src="../images/ds3.jpg" alt="AWS and Python Programming" class="training-image">
+                <img src="./images/ds3.jpg" alt="AWS and Python Programming" class="training-image">
             </div>
         `;
         relatedImages = `
             <div class="related-images">
-                <img src="../images/ds1.jpg" alt="AWS Console" class="related-image">
-                <img src="../images/ds2.jpg" alt="Python" class="related-image">
-                <img src="../images/Training(DS).jpg" alt="Cloud Deployment" class="related-image">
+                <img src="./images/ds1.jpg" alt="AWS Console" class="related-image">
+                <img src="./images/ds2.jpg" alt="Python" class="related-image">
+                <img src="./images/Training(DS).jpg" alt="Cloud Deployment" class="related-image">
             </div>
         `;
     }
