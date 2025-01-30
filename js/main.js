@@ -13,16 +13,21 @@ document.getElementById("moreSkillsBtn").addEventListener("click", function() {
 
     // Toggle visibility of additional skills
     moreSkills.forEach(function(skill) {
-        skill.style.display = (skill.style.display === "none" || skill.style.display === "") ? "block" : "none";
+        if (skill.style.display === "none" || skill.style.display === "") {
+            skill.style.display = "flex";  // Change to flex to maintain alignment
+        } else {
+            skill.style.display = "none";
+        }
     });
 
     // Change button text based on visibility
-    if (moreSkills[0].style.display === "block") {
+    if (moreSkills[0].style.display === "flex") {
         button.textContent = "Less";
     } else {
         button.textContent = "More";
     }
 });
+
 let lastClickedTraining = ''; // Variable to track the last clicked training
 
 // Function to show content when an image is clicked
@@ -109,4 +114,28 @@ function showContent(training) {
     document.getElementById('training-content').innerHTML = content + relatedImages;
     lastClickedTraining = training; // Track the last clicked training
 }
+document.querySelectorAll('.toggle-link').forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default link behavior
+
+        const card = link.parentElement; // Get the parent project card
+        const fullDescription = card.querySelector('.full-description');
+        const codeLink = card.querySelector('.code-link');
+
+        if (fullDescription.classList.contains('hidden')) {
+            // Show full description and code link
+            fullDescription.classList.remove('hidden');
+            codeLink.classList.remove('hidden');
+            link.textContent = 'See Less';
+        } else {
+            // Hide full description and code link
+            fullDescription.classList.add('hidden');
+            codeLink.classList.add('hidden');
+            link.textContent = 'See More';
+        }
+    });
+});
+
+   
+
 

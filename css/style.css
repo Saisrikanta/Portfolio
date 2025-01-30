@@ -80,6 +80,9 @@ body {
 
 .hero-image {
     margin-top: 30px;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
     animation: float 10s ease-in-out infinite;
 }
 
@@ -87,6 +90,7 @@ body {
     width: 300px;
     border-radius: 50%;
     transition: transform 0.3s;
+    margin: 0 auto; /* Centers the image horizontally */
 }
 
 .hero-image img:hover {
@@ -219,43 +223,47 @@ footer a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: center; /* Ensures all skills are centered */
 }
 
 .skill {
     width: 30%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers image and text horizontally */
+    justify-content: center; /* Centers content vertically */
 }
 
 .skill img {
-    width: 150px;  /* Fixed width */
-    height: 150px; /* Fixed height */
-    object-fit: cover; /* Ensures the images cover the area without stretching */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
-.skill p {
-    font-size: 1.1em;
-    margin-top: 5px;
+.more-skill {
+    display: none; /* Initially hidden */
 }
+
 /* Style for the More button */
 .more-skills-btn {
     background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding for the button */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Change cursor to pointer */
-    font-size: 16px; /* Set font size */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
     display: block;
-    margin: 20px auto;
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin: 20px auto; /* Centers the button */
+    transition: background-color 0.3s;
 }
 
-/* Hover effect for the More button */
 .more-skills-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049; /* Slightly darker green */
 }
+
 /* Style for the training container */
 .trainings-container {
     display: flex;
@@ -498,4 +506,68 @@ footer a:hover {
 a {
     text-decoration: none;
     color: inherit;
+}
+/* General Image Styling */
+img {
+    max-width: 100%; /* Ensures images don't exceed their container width */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes any inline spacing below the image */
+    border-radius: 10px; /* Adds subtle rounded corners to all images */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a soft shadow for a polished look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover Effect for Images */
+img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Responsive Adjustments for Small Screens */
+@media screen and (max-width: 768px) {
+    img {
+        border-radius: 5px; /* Adjusted corner radius for smaller devices */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for compact screens */
+    }
+}
+/* Hide elements by default */
+.hidden {
+    display: none;
+}
+
+/* Styling for the toggle link (See More / See Less) */
+.toggle-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle-link:hover {
+    color: #0056b3;
+}
+
+/* Code link styling */
+.code-link {
+    display: none;
+    color: white;
+    background-color: #28a745;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.code-link:hover {
+    background-color: #218838;
+}
+.project-image {
+    width: 300px; /* Set the width to the same value for both images */
+    height: 200px; /* Set the height to the same value for both images */
+    object-fit: cover; /* Ensures the image scales correctly without distortion */
 }
